@@ -1,0 +1,185 @@
+* {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.navBar .iconBars {
+  display: none;
+}
+.navBar .container h5 {
+  width: 20%;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.navBar .container header {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBar .container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.navBar .container ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.navBar .container ul li {
+  inline-size: auto;
+}
+.navBar .container input {
+  border-radius: 2rem;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  padding: 6px 0px 6px 40px;
+}
+.navBar .container input:focus {
+  border: none;
+  outline: none;
+}
+.navBar .container .iconSearch {
+  position: fixed;
+  left: 56.3%;
+  z-index: 1;
+}
+.navBar .container header div {
+  width: 20%;
+}
+.navBar .container img {
+  width: 24px;
+  height: 24px;
+}
+
+.sideBar {
+  display: none;
+  background-color: black;
+  width: 100%;
+  flex: 1;
+}
+.sideBar input {
+  border-radius: 2rem;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  padding: 6px 0px 6px 40px;
+}
+.sideBar input:focus {
+  border: none;
+  outline: none;
+}
+.sideBar .iconSearch {
+  position: fixed;
+  left: 14%;
+  top: 20%;
+  z-index: 1;
+}
+.sideBar ul {
+  list-style: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 2rem 0rem;
+}
+
+/* موبايل صغير */
+@media (max-width: 575.98px) {
+  .navBar .iconBars {
+    display: block;
+    width: 10%;
+    font-size: 1.6rem;
+  }
+  .navBar .container {
+    justify-content: space-between;
+  }
+  .navBar .container h5 {
+    width: 65%;
+    margin-bottom: 5px;
+  }
+  .navBar .container header {
+    justify-content: flex-end;
+    width: 20%;
+  }
+  .navBar .container nav {
+    display: none;
+  }
+  .navBar .container header div {
+    width: 100%;
+  }
+}
+
+/* موبايل كبير */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navBar .iconBars {
+    display: block;
+    width: 10%;
+    font-size: 1.6rem;
+  }
+  .navBar .container {
+    justify-content: space-between;
+  }
+  .navBar .container h5 {
+    width: 65%;
+    margin-bottom: 5px;
+  }
+  .navBar .container header {
+    justify-content: flex-end;
+    width: 20%;
+  }
+  .navBar .container nav {
+    display: none;
+  }
+  .navBar .container header div {
+    width: 100%;
+  }
+}
+
+/* تابلت */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navBar .iconBars {
+    display: block;
+    width: 10%;
+    font-size: 1.6rem;
+  }
+  .navBar .container {
+    justify-content: space-between;
+  }
+  .navBar .container h5 {
+    width: 65%;
+    margin-bottom: 5px;
+  }
+  .navBar .container header {
+    justify-content: flex-end;
+    width: 20%;
+  }
+  .navBar .container nav {
+    display: none;
+  }
+  .navBar .container header div {
+    width: 100%;
+  }
+}
+
+/* لاب / ديسكتوب صغير */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* شاشات كبيرة */
+@media (min-width: 1200px) {
+}
