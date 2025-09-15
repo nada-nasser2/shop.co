@@ -10,28 +10,44 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
 }
+.navBar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+}
 .navBar .iconBars {
   display: none;
 }
-.navBar .container h5 {
+.navBar h5 {
   width: 20%;
   font-size: 2rem;
   font-weight: 800;
 }
-.navBar .container header {
+.navBar header {
   width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.navBar .container nav {
+.navBar .imgs-container {
+  width: 20%;
+}
+.navBar .imgs-container img {
+  width: 24px;
+  height: 24px;
+}
+.navBar nav {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.navBar .container ul {
+.navBar ul {
+  width: 50%;
   list-style: none;
   text-align: center;
   margin: 0;
@@ -41,52 +57,82 @@ body {
 .navBar .container ul li {
   inline-size: auto;
 }
-.navBar .container input {
+.navBar .container ul li a {
+  color: black;
+  text-decoration: none;
+}
+.navBar .search-container {
+  position: relative;
+  width: 50%;
+}
+.navBar .search-input {
+  width: 100%;
   border-radius: 2rem;
   background-color: #f0f0f0;
   border: 1px solid #f0f0f0;
-  position: relative;
   padding: 6px 0px 6px 40px;
 }
-.navBar .container input:focus {
+.navBar .container .search-input:focus {
   border: none;
   outline: none;
 }
-.navBar .container .iconSearch {
-  position: fixed;
-  left: 56.3%;
-  z-index: 1;
+.navBar .search-icon {
+  position: absolute;
+  left: 4%;
+  top: 31%;
+  pointer-events: none;
 }
-.navBar .container header div {
-  width: 20%;
+.navBar .list-down {
+  position: relative;
+  cursor: pointer;
 }
-.navBar .container img {
-  width: 24px;
-  height: 24px;
+.navBar .drop-down {
+  width: auto;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: 120%;
+  left: 0;
+  padding: 10px;
+  white-space: nowrap;
+  min-width: max-content;
+  border-radius: 6px;
+}
+.navBar .list-down.active .drop-down {
+  display: block;
 }
 
 .sideBar {
+  position: fixed;
   display: none;
   background-color: black;
   width: 100%;
   flex: 1;
+  z-index: 1;
 }
-.sideBar input {
+.sideBar .search-container {
+  position: relative;
+  width: 100%;
+}
+.sideBar .search-input {
+  width: 100%;
+  padding: 6px 0px 6px 40px;
   border-radius: 2rem;
   background-color: #f0f0f0;
   border: 1px solid #f0f0f0;
-  position: relative;
-  padding: 6px 0px 6px 40px;
 }
-.sideBar input:focus {
+.sideBar .search-input:focus {
   border: none;
   outline: none;
 }
-.sideBar .iconSearch {
-  position: fixed;
-  left: 14%;
-  top: 20%;
-  z-index: 1;
+.sideBar .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 32%;
+  pointer-events: none;
 }
 .sideBar ul {
   list-style: none;
@@ -96,6 +142,83 @@ body {
   gap: 12px;
   margin: 0;
   padding: 2rem 0rem;
+}
+.sideBar ul li a {
+  color: white;
+  text-decoration: none;
+}
+.hero-section {
+  background-image: url("./assets/Rectangle\ 2\ \(1\).png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-section .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero-section .section-details {
+  width: 40%;
+}
+.hero-section img {
+  width: 100%;
+  object-fit: cover;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: black;
+}
+.hero-section p {
+  color: #737272;
+  font-size: 12px;
+}
+.hero-section button {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 2rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 40%;
+}
+.hero-section .container-rate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  white-space: nowrap;
+  min-width: max-content;
+  height: auto;
+  justify-content: space-around;
+}
+.hero-section .container-rate div {
+  inline-size: auto;
+}
+.hero-section .container-rate span {
+  background-color: #737272;
+  width: 1px;
+}
+.hero-section .container-img {
+  display: none;
+  position: relative;
+}
+.hero-section .vectors {
+  width: 60%;
+  position: relative;
+}
+.hero-section .vectors .vector1 {
+  width: 7%;
+  height: 12%;
+  left: 20%;
+  bottom: 40%;
+  position: absolute;
+  object-fit: cover;
+}
+.hero-section .vectors .vector2 {
+  width: 10%;
+  height: 20%;
+  right: 3%;
+  position: absolute;
+  object-fit: cover;
 }
 
 /* موبايل صغير */
@@ -121,6 +244,38 @@ body {
   }
   .navBar .container header div {
     width: 100%;
+  }
+  .hero-section .section-details {
+    width: 100%;
+  }
+  .hero-section .container-img img {
+    object-fit: cover;
+  }
+  .hero-section {
+    background: #f2f0f1;
+  }
+  .hero-section .vectors {
+    visibility: hidden;
+  }
+  .hero-section .container-img {
+    display: block;
+    position: relative;
+  }
+  .hero-section .container-img .vector1 {
+    width: 10%;
+    height: 10%;
+    left: 5%;
+    bottom: 58%;
+    position: absolute;
+    object-fit: cover;
+  }
+  .hero-section .container-img .vector2 {
+    width: 20%;
+    height: 20%;
+    right: 7%;
+    top: 8%;
+    position: absolute;
+    object-fit: cover;
   }
 }
 
@@ -148,6 +303,35 @@ body {
   .navBar .container header div {
     width: 100%;
   }
+  .hero-section .section-details {
+    width: 100%;
+  }
+  .hero-section .container-img {
+    display: block;
+    position: relative;
+  }
+  .hero-section .container-img .vector1 {
+    width: 10%;
+    height: 10%;
+    left: 5%;
+    bottom: 58%;
+    position: absolute;
+    object-fit: cover;
+  }
+  .hero-section .container-img .vector2 {
+    width: 20%;
+    height: 20%;
+    right: 7%;
+    top: 8%;
+    position: absolute;
+    object-fit: cover;
+  }
+  .hero-section {
+    background: #f2f0f1;
+  }
+  .hero-section .vectors {
+    visibility: hidden;
+  }
 }
 
 /* تابلت */
@@ -173,6 +357,12 @@ body {
   }
   .navBar .container header div {
     width: 100%;
+  }
+  .hero-section .section-details {
+    width: 70%;
+  }
+  .hero-section .vectors {
+    visibility: hidden;
   }
 }
 
