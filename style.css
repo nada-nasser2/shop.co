@@ -220,6 +220,18 @@ body {
   position: absolute;
   object-fit: cover;
 }
+.container-brands {
+  background-color: black;
+}
+.container-brands .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container-brands img {
+  object-fit: contain;
+  width: calc(75% / 5) !important;
+}
 
 /* موبايل صغير */
 @media (max-width: 575.98px) {
@@ -277,6 +289,17 @@ body {
     position: absolute;
     object-fit: cover;
   }
+  .container-brands .container {
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem 0 !important;
+  }
+  .container-brands img {
+    width: calc(85% / 3) !important;
+  }
+  .hero-section .container {
+    padding-bottom: 0 !important;
+  }
 }
 
 /* موبايل كبير */
@@ -332,6 +355,17 @@ body {
   .hero-section .vectors {
     visibility: hidden;
   }
+  .container-brands .container {
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem 0 !important;
+  }
+  .container-brands img {
+    width: calc(85% / 3) !important;
+  }
+  .hero-section .container {
+    padding-bottom: 0 !important;
+  }
 }
 
 /* تابلت */
@@ -363,6 +397,14 @@ body {
   }
   .hero-section .vectors {
     visibility: hidden;
+  }
+  .container-brands .container {
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem 0 !important;
+  }
+  .container-brands img {
+    width: calc(90% / 3) !important;
   }
 }
 
