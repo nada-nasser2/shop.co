@@ -2,29 +2,33 @@ const dataCartNewArrivels = [
   {
     img: "assets/Frame 32 (1).png",
     name: "T-shirt With Tape Details",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "4.5/5",
+    rate: "4.5",
+    rateNambur: "4.5/",
+    rateNamburSpan: "5",
     price: "$120.00",
   },
   {
     img: "assets/Frame 33 (1).png",
     name: "Skinny Fit Jeans",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "3.5/5",
+    rate: "3.5",
+    rateNambur: "3.5/",
+    rateNamburSpan: "5",
     price: "$240.00",
   },
   {
     img: "assets/Frame 34 (1).png",
     name: "Checkered Shirt",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "4.5/5",
+    rate: "4.5",
+    rateNambur: "4.5/",
+    rateNamburSpan: "5",
     price: "$180.00",
   },
   {
     img: "assets/Frame 38 (1).png",
     name: "Sleeve Striped T-shirt",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "4.5/5",
+    rate: "4.5",
+    rateNambur: "4.5/",
+    rateNamburSpan: "5",
     price: "$130.00",
   },
 ];
@@ -33,29 +37,33 @@ const dataCartTopSeeling = [
   {
     img: "assets/Frame 32.png",
     name: "Vertical Striped Shirt",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "5.0/5",
+    rate: "5",
+    rateNambur: "5.0/",
+    rateNamburSpan: "5",
     price: "$212.00",
   },
   {
     img: "assets/Frame 33.png",
     name: "Courage Graphic T-shirt",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "4.0/5",
+    rate: "4",
+    rateNambur: "4.0/",
+    rateNamburSpan: "5",
     price: "$145.00",
   },
   {
     img: "assets/Frame 34.png",
     name: "Loose Fit Bermuda Shorts",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "3.0/5",
+    rate: "3",
+    rateNambur: "3.0/",
+    rateNamburSpan: "5",
     price: "$80.00",
   },
   {
     img: "./assets/Frame 38.png",
     name: "Faded Skinny Jeans",
-    rate: "⭐⭐⭐⭐⭐",
-    rateNambur: "4.5/5",
+    rate: "4.5",
+    rateNambur: "4.5/",
+    rateNamburSpan: "5",
     price: "$210.00",
   },
 ];
@@ -84,6 +92,19 @@ function setTop() {
 window.addEventListener("resize", setTop);
 setTop();
 
+function getStars(rating) {
+  let stars = "";
+  let fullStars = Math.floor(rating);
+  let halfStars = rating % 1 !== 0;
+  for (let i = 0; i < fullStars; i++) {
+    stars += `<i class="fa-solid fa-star" style="color: #FFD43B;"></i>`;
+  }
+  if (halfStars) {
+    stars += `<i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>`;
+  }
+  return stars;
+}
+
 const shopCardNewArrivels = dataCartNewArrivels
   .map((card) => {
     return `
@@ -92,8 +113,8 @@ const shopCardNewArrivels = dataCartNewArrivels
       <div class="container-details">
         <p>${card.name}</p>
         <div>
-          <p>${card.rate}</p>
-          <span>${card.rateNambur}</span>
+          <p>${getStars(card.rate)}</p>
+          <span>${card.rateNambur}<span>${card.rateNamburSpan}</span></span>
         </div>
         <p>${card.price}</p>
       </div>
@@ -111,8 +132,8 @@ const shopCardTopSeeling = dataCartTopSeeling
       <div class="container-details">
         <p>${card.name}</p>
         <div>
-          <p>${card.rate}</p>
-          <span>${card.rateNambur}</span>
+          <p>${getStars(card.rate)}</p>
+          <span>${card.rateNambur}<span>${card.rateNamburSpan}</span></span>
         </div>
         <p>${card.price}</p>
       </div>

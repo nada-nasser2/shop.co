@@ -234,6 +234,9 @@ body {
   width: calc(75% / 5) !important;
 }
 
+.newArrivals .container {
+  border-bottom: 1px solid gray;
+}
 .shopCards {
   display: flex;
   flex-wrap: wrap;
@@ -248,9 +251,24 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+  gap: 3px;
+}
+.shopCards .shopCard .container-details p {
+  margin: 0;
+  font-weight: 700;
+}
+.shopCards .shopCard .container-details div p {
+  display: flex;
+  margin: 0;
+  inline-size: auto;
 }
 .shopCards .shopCard .container-details div {
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.shopCards .shopCard .container-details div span span {
+  color: gray;
 }
 .newArrivals button,
 .topSeeling button {
@@ -372,6 +390,12 @@ body {
   .style h1 {
     font-size: 1.6rem;
     font-weight: 700;
+  }
+  .newArrivals .container {
+    border-bottom: none;
+  }
+  .shopCards {
+    border-bottom: 1px solid gray;
   }
 }
 
