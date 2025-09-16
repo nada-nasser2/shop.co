@@ -84,8 +84,9 @@ function setTop() {
 window.addEventListener("resize", setTop);
 setTop();
 
-const shopCardNewArrivels = dataCartNewArrivels.map((card) => {
-  return `
+const shopCardNewArrivels = dataCartNewArrivels
+  .map((card) => {
+    return `
     <div class="shopCard">
       <img src="${card.img}" alt="" />
       <div class="container-details">
@@ -96,13 +97,15 @@ const shopCardNewArrivels = dataCartNewArrivels.map((card) => {
         </div>
         <p>${card.price}</p>
       </div>
-  </div>
+    </div>
   `;
-});
+  })
+  .join("");
 shopArrivels.innerHTML = shopCardNewArrivels;
 
-const shopCardTopSeeling = dataCartTopSeeling.map((card) => {
-  return `
+const shopCardTopSeeling = dataCartTopSeeling
+  .map((card) => {
+    return `
     <div class="shopCard">
       <img src="${card.img}" alt="" />
       <div class="container-details">
@@ -115,5 +118,6 @@ const shopCardTopSeeling = dataCartTopSeeling.map((card) => {
       </div>
   </div>
   `;
-});
+  })
+  .join("");
 shopSeeling.innerHTML = shopCardTopSeeling;

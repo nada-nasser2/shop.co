@@ -260,6 +260,12 @@ body {
   border-radius: 2rem;
   border: 1px solid #f2f0f1;
 }
+.newArrivals h1,
+.topSeeling h1,
+.style h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
 
 .style {
   background-color: #f2f0f1;
@@ -304,8 +310,12 @@ body {
   .navBar .container header div {
     width: 100%;
   }
+  .hero-section .container {
+    padding: 0 !important;
+  }
   .hero-section .section-details {
     width: 100%;
+    padding: 2rem 1rem 0rem;
   }
   .hero-section .container-img img {
     object-fit: cover;
@@ -358,6 +368,10 @@ body {
     width: 100% !important;
     height: 190px;
     object-fit: fill;
+  }
+  .style h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
   }
 }
 
@@ -436,6 +450,10 @@ body {
     width: 100% !important;
     height: 190px;
     object-fit: fill;
+  }
+  .style h1 {
+    font-size: 2rem;
+    font-weight: 700;
   }
 }
 
