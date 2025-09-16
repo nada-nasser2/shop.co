@@ -227,10 +227,38 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 .container-brands img {
   object-fit: contain;
   width: calc(75% / 5) !important;
+}
+
+.shopCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shopCards .shopCard {
+  width: calc(90% / 4);
+  display: flex;
+  flex-direction: column;
+}
+.shopCards .shopCard .container-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.shopCards .shopCard .container-details div {
+  display: flex;
+}
+.newArrivals button ,
+.topSeeling button{
+  width: 15%;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  border: 1px solid #f2f0f1;
 }
 
 /* موبايل صغير */
@@ -300,6 +328,13 @@ body {
   .hero-section .container {
     padding-bottom: 0 !important;
   }
+  .shopCards .shopCard {
+    width: calc(90% / 2);
+  }
+  .newArrivals button,
+  .topSeeling button {
+    width: 35%;
+  }
 }
 
 /* موبايل كبير */
@@ -366,6 +401,13 @@ body {
   .hero-section .container {
     padding-bottom: 0 !important;
   }
+  .shopCards .shopCard {
+    width: calc(90% / 2);
+  }
+  .newArrivals button,
+  .topSeeling button {
+    width: 35%;
+  }
 }
 
 /* تابلت */
@@ -405,6 +447,10 @@ body {
   }
   .container-brands img {
     width: calc(90% / 3) !important;
+  }
+  .newArrivals button,
+  .topSeeling button {
+    width: 35%;
   }
 }
 
