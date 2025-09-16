@@ -252,13 +252,32 @@ body {
 .shopCards .shopCard .container-details div {
   display: flex;
 }
-.newArrivals button ,
-.topSeeling button{
+.newArrivals button,
+.topSeeling button {
   width: 15%;
   padding: 1rem 2rem;
   background-color: white;
   border-radius: 2rem;
   border: 1px solid #f2f0f1;
+}
+
+.style {
+  background-color: #f2f0f1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 2rem;
+}
+.style section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.style img {
+  object-fit: unset;
+  border-radius: 2rem;
+  height: 289px;
 }
 
 /* موبايل صغير */
@@ -335,6 +354,11 @@ body {
   .topSeeling button {
     width: 35%;
   }
+  .style img {
+    width: 100% !important;
+    height: 190px;
+    object-fit: fill;
+  }
 }
 
 /* موبايل كبير */
@@ -408,6 +432,11 @@ body {
   .topSeeling button {
     width: 35%;
   }
+  .style img {
+    width: 100% !important;
+    height: 190px;
+    object-fit: fill;
+  }
 }
 
 /* تابلت */
@@ -451,6 +480,12 @@ body {
   .newArrivals button,
   .topSeeling button {
     width: 35%;
+  }
+  .style section {
+    gap: 0.5rem;
+  }
+  .style img {
+    object-fit: fill;
   }
 }
 
